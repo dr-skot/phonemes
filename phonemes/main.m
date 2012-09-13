@@ -88,26 +88,10 @@ int main (int argc, const char * argv[])
       printf("Voice not found: %s\n", [voiceName UTF8String]);
       return 1;      
     }
-    /*
-     voice = [@"com.apple.speech.synthesis.voice." stringByAppendingString:voice];
-     if (NSNotFound == [[NSSpeechSynthesizer availableVoices] indexOfObject:voice]) {
-     printf("Voice not found: %s\n", [voice UTF8String]);
-     return 1;
-     }
-     */
   }
   
   // rest of arguments are the input
   input = [args componentsJoinedByString:@" "];
-  
-  /*
-   NSDictionary *dict = [NSDictionary dictionaryWithObject:@"1248" forKey:@"soPhonemeOptions"];
-   NSSpeechSynthesizer *synthesizer = [[NSSpeechSynthesizer alloc] initWithVoice:voice];
-   [synthesizer setObject:dict forProperty:NSSpeechSynthesizerInfoProperty error:nil];
-   NSString *output = [synthesizer phonemesFromText:input];
-   printf("%s\n", [output UTF8String]);
-   [synthesizer release];
-   */
   
   char *output = getPhonemes(input, voice, outputTune);
   printf("%s\n", output);
