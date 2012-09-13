@@ -1,0 +1,235 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E254E4DB1393EA0F00365BFB /* SynthesizerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E254E4DA1393EA0F00365BFB /* SynthesizerDelegate.m */; };
+		E28ABD8013931145004055EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28ABD7F13931145004055EF /* Foundation.framework */; };
+		E28ABD8313931145004055EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28ABD8213931145004055EF /* main.m */; };
+		E28ABD8D1393117A004055EF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28ABD8C1393117A004055EF /* AppKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E28ABD7913931145004055EF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E254E4D91393EA0F00365BFB /* SynthesizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizerDelegate.h; sourceTree = "<group>"; };
+		E254E4DA1393EA0F00365BFB /* SynthesizerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynthesizerDelegate.m; sourceTree = "<group>"; };
+		E28ABD7B13931145004055EF /* phonemes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = phonemes; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28ABD7F13931145004055EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E28ABD8213931145004055EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E28ABD8513931145004055EF /* phonemes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "phonemes-Prefix.pch"; sourceTree = "<group>"; };
+		E28ABD8613931145004055EF /* phonemes.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = phonemes.1; sourceTree = "<group>"; };
+		E28ABD8C1393117A004055EF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E28ABD7813931145004055EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28ABD8D1393117A004055EF /* AppKit.framework in Frameworks */,
+				E28ABD8013931145004055EF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E28ABD7013931145004055EF = {
+			isa = PBXGroup;
+			children = (
+				E28ABD8113931145004055EF /* phonemes */,
+				E28ABD7E13931145004055EF /* Frameworks */,
+				E28ABD7C13931145004055EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E28ABD7C13931145004055EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E28ABD7B13931145004055EF /* phonemes */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E28ABD7E13931145004055EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E28ABD8C1393117A004055EF /* AppKit.framework */,
+				E28ABD7F13931145004055EF /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E28ABD8113931145004055EF /* phonemes */ = {
+			isa = PBXGroup;
+			children = (
+				E28ABD8213931145004055EF /* main.m */,
+				E28ABD8613931145004055EF /* phonemes.1 */,
+				E28ABD8413931145004055EF /* Supporting Files */,
+				E254E4D91393EA0F00365BFB /* SynthesizerDelegate.h */,
+				E254E4DA1393EA0F00365BFB /* SynthesizerDelegate.m */,
+			);
+			path = phonemes;
+			sourceTree = "<group>";
+		};
+		E28ABD8413931145004055EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E28ABD8513931145004055EF /* phonemes-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E28ABD7A13931145004055EF /* phonemes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E28ABD8913931145004055EF /* Build configuration list for PBXNativeTarget "phonemes" */;
+			buildPhases = (
+				E28ABD7713931145004055EF /* Sources */,
+				E28ABD7813931145004055EF /* Frameworks */,
+				E28ABD7913931145004055EF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = phonemes;
+			productName = phonemes;
+			productReference = E28ABD7B13931145004055EF /* phonemes */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E28ABD7213931145004055EF /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E28ABD7513931145004055EF /* Build configuration list for PBXProject "phonemes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E28ABD7013931145004055EF;
+			productRefGroup = E28ABD7C13931145004055EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E28ABD7A13931145004055EF /* phonemes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E28ABD7713931145004055EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E28ABD8313931145004055EF /* main.m in Sources */,
+				E254E4DB1393EA0F00365BFB /* SynthesizerDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E28ABD8713931145004055EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E28ABD8813931145004055EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E28ABD8A13931145004055EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "phonemes/phonemes-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E28ABD8B13931145004055EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "phonemes/phonemes-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E28ABD7513931145004055EF /* Build configuration list for PBXProject "phonemes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28ABD8713931145004055EF /* Debug */,
+				E28ABD8813931145004055EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E28ABD8913931145004055EF /* Build configuration list for PBXNativeTarget "phonemes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E28ABD8A13931145004055EF /* Debug */,
+				E28ABD8B13931145004055EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E28ABD7213931145004055EF /* Project object */;
+}

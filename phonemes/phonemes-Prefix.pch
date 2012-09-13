@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'phonemes' target in the 'phonemes' project
+//
+
+#ifdef __OBJC__
+  #import <Foundation/Foundation.h>
+#endif
