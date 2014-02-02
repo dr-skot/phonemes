@@ -21,20 +21,26 @@ NSString *getPhonemes(NSString *input, int voiceNum, BOOL outputTune)
     VoiceSpec voice;
     GetIndVoice(voiceNum, &voice);
     NewSpeechChannel(&voice, &chan);
-  }
+    }
     
   CFStringRef phonemes;
 
   if (outputTune) {
-      long flagValue = kSpeechGenerateTune + kSpeechRelativePitch + kSpeechRelativeDuration + kSpeechShowSyllables;
-      NSNumber *flags = [NSNumber numberWithLong:flagValue];
-      SetSpeechProperty(chan, kSpeechPhonemeOptionsProperty, flags);
+      long flags = kSpeechGenerateTune + kSpeechRelativePitch + kSpeechRelativeDuration + kSpeechShowSyllables;
+      // use SetSpeechProperty for OS 10.8 or higher, SetSpeechInfo otherwise
+      SInt32 versMaj, versMin;
+      Gestalt(gestaltSystemVersionMajor, &versMaj);
+      Gestalt(gestaltSystemVersionMinor, &versMin);
+      if (versMaj >= 10 && versMin >= 8) {
+          NSNumber *flagsParam = [NSNumber numberWithLong:flags];
+          SetSpeechProperty(chan, kSpeechPhonemeOptionsProperty, flagsParam);
+      } else {
+          SetSpeechInfo(chan, soPhonemeOptions, &flags);
+      }
   }
 
   CopyPhonemesFromText(chan, (CFStringRef) input, &phonemes);
-  
   DisposeSpeechChannel(chan);
-  
   return (NSString *)phonemes;
 }
 
@@ -107,3 +113,4 @@ int main (int argc, const char * argv[])
   [pool drain];
   return 0;
 }
+
