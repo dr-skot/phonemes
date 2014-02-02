@@ -24,8 +24,13 @@ NSString *getPhonemes(NSString *input, int voiceNum, BOOL outputTune)
   }
     
   CFStringRef phonemes;
-  
-  if (outputTune) SetSpeechProperty(chan, kSpeechPhonemeOptionsProperty, "1248");
+
+  if (outputTune) {
+      long flagValue = kSpeechGenerateTune + kSpeechRelativePitch + kSpeechRelativeDuration + kSpeechShowSyllables;
+      NSNumber *flags = [NSNumber numberWithLong:flagValue];
+      SetSpeechProperty(chan, kSpeechPhonemeOptionsProperty, flags);
+  }
+
   CopyPhonemesFromText(chan, (CFStringRef) input, &phonemes);
   
   DisposeSpeechChannel(chan);
