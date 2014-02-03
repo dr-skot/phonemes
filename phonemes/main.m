@@ -31,7 +31,7 @@ NSString *getPhonemes(NSString *input, int voiceNum, BOOL outputTune)
       SInt32 versMaj, versMin;
       Gestalt(gestaltSystemVersionMajor, &versMaj);
       Gestalt(gestaltSystemVersionMinor, &versMin);
-      if (versMaj >= 10 && versMin >= 8) {
+      if (versMaj > 10 || (versMaj == 10 && versMin >= 8)) {
           NSNumber *flagsParam = [NSNumber numberWithLong:flags];
           SetSpeechProperty(chan, kSpeechPhonemeOptionsProperty, flagsParam);
       } else {
